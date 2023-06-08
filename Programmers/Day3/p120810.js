@@ -1,3 +1,5 @@
+// 나머지 구하기
+// 스스로 풀어보기
 function solution(num1, num2) {
     var answer = -1;
     
