@@ -18,10 +18,18 @@ function solution(numbers) {
     }
     */
 
+    /*
+    // 현업에서는 while문보다 for문을 더 많이 사용합니다!
+    // 그래도 while문 <-> for문 왔다갔다 연습해보기!
     let cnt = 0;
-    while(cnt < 10) {
+    while(cnt < numbers.length) {
         answer.push(numbers[cnt] * 2);
         cnt = cnt + 1;
+    }
+    */
+
+    for(let cnt = 0; cnt < answer.length; cnt++) {
+        answer.push(numbers[cnt] * 2);
     }
 
     return answer;
