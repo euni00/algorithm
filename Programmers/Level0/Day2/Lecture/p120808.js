@@ -1,4 +1,4 @@
-// * 강의 들으면서 작성
+// 분수의 덧셈 (강의)
 // 기약 분수 : 공통적으로 나눌 수 있는 숫자가 1밖에 없는 경우
 function solution(denum1, num1, denum2, num2) {
     // var answer = [];

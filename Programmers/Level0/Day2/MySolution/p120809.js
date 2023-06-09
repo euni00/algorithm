@@ -1,3 +1,5 @@
+// 배열 두 배 만들기
+// 스스로 풀어보기
 function solution(numbers) {
     var answer = [];
     

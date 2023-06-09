@@ -1,3 +1,4 @@
+// 분수의 덧셈
 // * 최대한 고민 많이 하면서 풀기
 function solution(numer1, denom1, numer2, denom2) {
     
