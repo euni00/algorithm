@@ -7,8 +7,26 @@ function solution(array) {
 
     // 1-4. 원래 배열 길이 만큼 반복했을 경우 이 과정을 끝낸다. 그렇지 않은 경우 1-1로 돌아가기
     let arrayCnt = 0;
+    let sortedArray = [];
     let newArray = [];
+    
+
+    
+    /*
+     이렇게 짜면 가독성이 떨어질까?.. (고민고민)
+     let minNumber = array[0];
+     for(let i = 0; i < array.length; i++) {
+         if(array[i] < minNumber) {
+            minNumber = array[i];
+            sortedArray.push(minNumber);
+             
+         }
+     }
+     */
+
     while(arrayCnt < array.length) {
+
+    /*
     // 1-1. 배열 중 제일 작은 값 찾기
     // minNumber -> 최종적으로 가장 작은 수
     // -1000 < array의 원소 < 1000 -> minNumber (가장 작은 수)를 1000이라고 가정해보기
@@ -20,6 +38,19 @@ function solution(array) {
             }
             cnt += 1;
         }
+    */
+
+    // 1-1. 배열의 최소값 찾기
+    let minNumber = array[0];
+    for(let i = 0; i < array.length; i++) {
+        if(array[i] < minNumber) {
+            minNumber = array[i];
+        }
+    }
+
+    console.log(minNumber);
+
+
 
         /*
         if(array[0] < minNumber) {
@@ -39,6 +70,14 @@ function solution(array) {
         // 1-3. 원래 배열에서 넣은 값은 지워주기
         // sol : 최소값에 걸리지 않게 엄청 큰 값으로 바꿔주기
         // [9, -1, 0] -> [9, 100000, 0]
+        for(let i = 0; i < array.length; i++) {
+            if(minNumber === array[i]) {
+                array[i] = 10000;
+                break;
+            }
+        }
+        
+        /*
         let cnt2 = 0;
         while(cnt2 < array.length) {
             if(minNumber === array[cnt2]) {
@@ -47,6 +86,8 @@ function solution(array) {
             }
             cnt2 += 1;
         }
+        */
+
         
         arrayCnt += 1;
     }
@@ -87,16 +128,3 @@ console.log(solution(input2));
 // 배열 길이가 n
 // array[Math.floor(n/2)]
 
-/* 
-    이렇게 짜면 가독성이 떨어질까?.. (고민고민)
-    let minNumber = array[0];
-    for(let i = 0; i < array.length; i++) {
-        if(array[i] < minNumber) {
-            minNumber = array[i];
-            answer.push(minNumber);
-            
-        }
-    }
-
-    console.log(minNumber);
-*/
