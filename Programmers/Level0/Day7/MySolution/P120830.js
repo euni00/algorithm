@@ -1,3 +1,5 @@
+// 양꼬치
+// 스스로 해결하기
 function solution(n, k) {
   let totalMoney = 0;
   let discountNum = 0;
