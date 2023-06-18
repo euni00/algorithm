@@ -2,11 +2,16 @@
 // 스스로 해결하기
 function solution(n, k) {
   let totalMoney = 0;
-  let discountNum = 0;
 
   totalMoney = 12000 * n + 2000 * k;
 
-  discountNum = Math.floor(totalMoney / 120000);
+  console.log("totalMoney : ", totalMoney);
+
+  // discountNum = Math.floor(totalMoney / 120000);
+
+  let discountNum = Math.floor(n / 10);
+
+  console.log("discountNum : ", discountNum);
 
   totalMoney -= 2000 * discountNum;
 

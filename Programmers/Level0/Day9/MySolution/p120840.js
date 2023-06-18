@@ -1,5 +1,6 @@
 // 구슬을 나누는 경우의 수
 // 스스로 해결하기
+// 겹치는 숫자 제거해주기
 function solution(balls, share) {
   var ballCount = 0;
 
@@ -11,14 +12,14 @@ function solution(balls, share) {
     num1 *= i;
   }
 
-  console.log(num1);
+  console.log("num1 : ", num1);
 
   // 분모
   for (let i = share; i >= 1; i--) {
     num2 *= i;
   }
 
-  console.log(num2);
+  console.log("num2 : ", num2);
 
   ballCount = num1 / num2;
 
