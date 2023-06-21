@@ -21,4 +21,5 @@ const box2 = [10, 8, 6];
 const n2 = 3;
 console.log(solution(box2, n2));
 
+// PASS
 // 1. 상자의 가로, 세로, 높이를 n으로 나누고 그 몫을 곱하기
