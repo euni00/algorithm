@@ -18,7 +18,8 @@ function solution(n, k) {
   return totalMoney;
 }
 
-// ERROR : 정확도가 부족한 코드 (다시 확인)
+// PASS
+// ERROR : 정확도가 부족한 코드 (다시 확인) -> 문제 이해 잘못
 // test1
 console.log(solution(10, 3)); // 124,000
 
