@@ -64,6 +64,7 @@ console.log(solution(s4));
 const s5 = "-1 -2 -3 Z";
 console.log(solution(s5));
 
+// ERROR
 // 문제점 : for문이 끝까지 돌지 않는다 -> 원인 찾기
 // 첫 등장하는 Z에서 for문이 멈추는 것 같다.
 // 1. 공백을 기준으로 배열로 변환
