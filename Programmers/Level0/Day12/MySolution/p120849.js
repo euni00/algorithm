@@ -2,38 +2,41 @@
 // 스스로 해결하기
 function solution(my_string) {
   var newString = "";
-  const vowel = ["a", "i", "o", "u", "e"];
-  let minusIndex = 0;
+  // const vowel = ["a", "i", "o", "u", "e"];
+  let removeArray = [];
   // 1. 문자열을 배열로 변환하기
   let newArray = [...my_string];
-  console.log("newArray : ", newArray);
+  console.log("before newArray : ", newArray);
 
-  // 2. a, i, o, u, e를 만나면 제거하기
-  for (let i = 0; i < 11; i++) {
-    for (let j = 0; j < vowel.length; j++) {
-      if (newArray[i] == vowel[j]) {
-        newArray.splice(i - minusIndex, 1);
-        minusIndex += 1;
-        console.log("minusIndex : ", minusIndex);
-      }
+  // 2. a, i, o, u, e를 제외한 문자를 새로운 배열에 넣어주기
+  for (let i = 0; i < my_string.length; i++) {
+    if (
+      newArray[i] !== "a" &&
+      newArray[i] !== "i" &&
+      newArray[i] !== "o" &&
+      newArray[i] !== "u" &&
+      newArray[i] !== "e"
+    ) {
+      removeArray.push(newArray[i]);
     }
+    console.log("i : ", i);
   }
-  console.log("newArray : ", newArray);
+  console.log("after removeArray : ", removeArray);
 
-  newString = newArray.join("");
+  newString = removeArray.join("");
   return newString;
 }
 
-// ERROR
-/*
+// PASS
+// tip! 원본 건들지 말기!!
 // test1
 const my_string1 = "bus";
 console.log(solution(my_string1));
-*/
 
 // test2
 const my_string2 = "nice to meet you";
 console.log(solution(my_string2));
+
 // 모음 -> a, i, o, u, e
 // 1. 문자열을 배열로 변환하기
 // 2. a, i, o, u, e를 만나면 제거하기
