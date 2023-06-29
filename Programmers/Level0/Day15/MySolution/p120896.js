@@ -45,6 +45,7 @@ console.log(solution(s2)); // "d"
 const s3 = "hello";
 console.log(solution(s3)); // "d"
 
+// PASS
 // 1. 자기자신 뺴고 겹치는 문자가 몇개인지 확인하기
 // 1-1. 겹치는 문자가 0개이면 새로운 배열에서 넣기
 // 1-2. 겹치는 문자가 1개 이상이면 아무것도 하지 않기
